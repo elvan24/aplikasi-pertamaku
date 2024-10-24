@@ -45,3 +45,7 @@ app.get('/api/file', (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
+
+app.get('/your_name', (req, res) => {
+  res.send('Hello, elvan'); // Replace 'your_name' with your actual name.
+});
