@@ -11,7 +11,7 @@ const getUser = async () => {
     alert("Please enter a User ID.");
     return;
   }
-  const response = await fetch(`http://localhost:3000/api/user/${userId.value}`);
+  const response = await fetch(`http://localhost:3000/api/user/${encodeURIComponent(userId.value)}`);
   if (!response.ok) {
     alert("Failed to fetch user information. Please check the User ID.");
     return;
@@ -25,7 +25,7 @@ const changeEmail = async () => {
     return;
   }
 
-  const response = await fetch(`http://localhost:3000/api/user/${userId.value}/change-email`, {
+  const response = await fetch(`http://localhost:3000/api/user/${encodeURIComponent(userId.value)}/change-email`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
