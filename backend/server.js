@@ -66,6 +66,6 @@ app.listen(3000, () => {
 });
 
 // Example endpoint
-app.get('/your_name', (req, res) => {
-  res.send('Hello, elvan'); // Replace 'your_name' with your actual name.
+app.get('/elvan', (req, res) => {
+  res.send('Hello, elvan');
 });
